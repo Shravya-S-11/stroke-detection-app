@@ -39,12 +39,12 @@ if st.button("Predict Stroke Risk"):
 
     st.markdown("---")
 
-   if 40 <= probability * 100 < 60:
-      st.warning("Borderline case — risk indicators present.\n\n"
-                 f"**Stroke Prediction:** {'Yes' if prediction == 1 else 'No'}")
+    if 40 <= probability * 100 < 60:
+       st.warning("Borderline case — risk indicators present.\n\n"
+                  f"**Stroke Prediction:** {'Yes' if prediction == 1 else 'No'}")
     elif prediction == 1:
-      st.error("⚠**High Risk of Stroke** — Please consult a doctor.\n\n"
-               f"**Stroke Prediction:** Yes")
+       st.error("⚠**High Risk of Stroke** — Please consult a doctor.\n\n"
+                f"**Stroke Prediction:** Yes")
     else:
-       st.success("**Low Risk of Stroke** — No immediate concern.\n\n"
-                 f"**Stroke Prediction:** No")
+        st.success("**Low Risk of Stroke** — No immediate concern.\n\n"
+                  f"**Stroke Prediction:** No")

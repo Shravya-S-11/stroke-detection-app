@@ -35,10 +35,10 @@ if st.button("Predict Stroke Risk"):
 
     threshold = 0.25
     probability = model.predict_proba(input_scaled)[0][1]
-    prediction = int(probability >= threshold)  # probability of stroke
+    prediction = int(probability >= threshold)  
 
     st.markdown("---")
-    st.markdown(f"###  Probability of Stroke: *{probability*100:.2f}%*")
+    #st.markdown(f"###  Probability of Stroke: *{probability*100:.2f}%*")
 
     if 40 <= probability * 100 < 60:
         st.warning(" Borderline case — risk indicators present.")

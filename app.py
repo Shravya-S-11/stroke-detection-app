@@ -24,7 +24,7 @@ avg_glucose_level = st.number_input("Average Glucose Level (mg/dL)", min_value=0
 bmi = st.number_input("BMI (Body Mass Index)", min_value=10.0, max_value=60.0, value=22.0)
 
 smoking_status = st.selectbox("Smoking Status", ["formerly smoked", "smokes", "never smoked"])
-smoking_map = {"formerly smoked": 0, "smokes": 1, "never smoked": 2}
+smoking_map = {"formerly smoked": 0, "smokes": 2, "never smoked": 1}
 smoking_status = smoking_map[smoking_status]
 
 if st.button("Predict Stroke Risk"):
